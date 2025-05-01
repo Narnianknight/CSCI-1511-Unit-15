@@ -22,8 +22,14 @@ for row in reader:
         dates.append(date)
         unemployment_rates.append(unemployment_rate)
 
+plt.style.use("dark_background")
 figure, graph = plt.subplots()
 
-graph.plot(dates, unemployment_rates)
+graph.plot(dates, unemployment_rates, color="blue")
+
+graph.set_title("Ohio Unemployment Rate", fontsize=20)
+graph.set_xlabel("Date")
+graph.set_ylabel("Unemployment Rate")
+figure.autofmt_xdate()
 
 plt.show()
